@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Update</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Update Delivery Status</h2>
+        <form id="deliveryForm">
+            <label for="bookingId">Booking ID:</label>
+            <input type="text" id="bookingId" required>
+
+            <label for="deliveryStatus">Delivery Status:</label>
+            <select id="deliveryStatus" required>
+                <option value="pickedUp">Picked Up</option>
+                <option value="inTransit">In Transit</option>
+                <option value="delivered">Delivered</option>
+                <option value="returned">Returned</option>
+            </select>
+
+            <button type="submit">Update Status</button>
+        </form>
+        <div id="deliveryResult"></div>
+    </div>
+    <script src="script-delivery-update.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+    <h2>Officer Registration</h2>
+    <form action="registration-acknowledgment.html" method="POST">
+        <fieldset>
+            <legend>Personal Information:</legend>
+            <label for="officerName">Customer Name:</label>
+            <input type="text" id="officerName" name="officerName" maxlength="50" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <select id="countryCode" name="countryCode">
+                <option value="+91">+91</option>
+            </select>
+            <input type="text" id="mobile" name="mobile" pattern="\d{10}" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Username and Password:</legend>
+            <label for="userid">User ID:</label>
+            <input type="text" id="userid" name="userid" minlength="5" maxlength="20" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="30" required
+                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}"><br><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" maxlength="30" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences:</legend>
+            <label for="preferences">Preferences:</label>
+            <textarea id="preferences" name="preferences"></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </form>
+    </div>
+</body>
+</html>

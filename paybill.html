@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Payment</h2>
+        <form id="paymentForm">
+            <label for="billAmount">Bill Amount:</label>
+            <input type="text" id="billAmount" value="$100" readonly>
+
+            <label for="paymentMode">Mode of Payment:</label>
+            <select id="paymentMode">
+                <option value="debit">Debit Card</option>
+                <option value="credit">Credit Card</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+        </form>
+        <button onclick="redirectToBooking()">Back to Booking</button>
+    </div>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = "payment-success.html";
+        });
+
+        function redirectToBooking() {
+            window.location.href = "booking-service.html";
+        }
+    </script>
+</body>
+</html>

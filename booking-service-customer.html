@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Book a Service</h2>
+        <form id="bookingForm">
+            <h3>Sender Information</h3>
+            <label for="senderName">Name:</label>
+            <input type="text" id="senderName" required>
+
+            <label for="senderAddress">Address:</label>
+            <input type="text" id="senderAddress" required>
+
+            <label for="senderContact">Contact Details:</label>
+            <input type="text" id="senderContact" required>
+
+            <h3>Receiver Information</h3>
+            <label for="receiverName">Name:</label>
+            <input type="text" id="receiverName" required>
+
+            <label for="receiverAddress">Address:</label>
+            <input type="text" id="receiverAddress" required>
+
+            <label for="receiverPin">Pin Code:</label>
+            <input type="text" id="receiverPin" required>
+
+            <label for="receiverContact">Contact Details:</label>
+            <input type="text" id="receiverContact" required>
+
+            <h3>Parcel Details</h3>
+            <label for="parcelWeight">Weight:</label>
+            <input type="text" id="parcelWeight" required>
+
+            <label for="parcelDescription">Contents Description:</label>
+            <textarea id="parcelDescription" required></textarea>
+
+            <h3>Shipping Options</h3>
+            <label for="deliverySpeed">Delivery Speed:</label>
+            <select id="deliverySpeed">
+                <option value="standard">Standard</option>
+                <option value="express">Express</option>
+            </select>
+
+            <label for="packagingPreference">Packaging Preference:</label>
+            <select id="packagingPreference">
+                <option value="standard">Standard Packaging</option>
+                <option value="custom">Custom Packaging</option>
+                <option value="eco">Eco-friendly Packaging</option>
+                <option value="fragile">Fragile Item Handling</option>
+            </select>
+
+            <h3>Date and Time Selection</h3>
+            <label for="pickupTime">Preferred Pickup Time:</label>
+            <input type="datetime-local" id="pickupTime" required>
+
+            <h3>Service Cost and Payment</h3>
+            <p>Total Cost: $[Calculated Cost]</p>
+            <button type="submit">Proceed to Pay</button>
+        </form>
+    </div>
+    <script src="script-booking-service.js"></script>
+</body>
+</html>
